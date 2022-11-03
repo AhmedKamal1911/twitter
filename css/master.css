@@ -1,0 +1,77 @@
+/* Start-Global-Rules */
+:root{
+--main-color:black;
+--main-transition:0.3s;
+--border-color:gray;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a{
+  text-decoration: none;
+}
+body{
+  font-family: 'Ubuntu', sans-serif;
+  background-color: var(--main-color);
+}
+/* End-Global-Rules */
+/* Start-Header */
+header{
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  padding-left: 14%;
+  padding-top: 20px;
+  border-right: 1px solid var(--border-color);
+}
+@media(max-width:1535px){
+  header{
+    width: 80px;
+    padding-left: 10px;
+    align-items: center;
+  }
+}
+header  > i{
+transition: var(--main-transition);
+cursor: pointer;
+margin-bottom: 30px;
+}
+header > i:hover{
+  color: #2fa1ec;
+}
+
+header  a{
+  width: fit-content;
+  padding: 15px 20px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+  transition: var(--main-transition);
+}
+@media(max-width:1535px){
+  header  a{
+    justify-content: center;
+    padding: 10px 15px;
+    margin: 0 auto;
+  }
+  header  a span{
+    display: none;
+  }
+}
+header  a:hover{
+  background-color: rgba(192, 189, 189, 0.603);
+}
+header  a i{
+font-size: 25px;
+margin-right: 20px;
+}
+@media(max-width:1535px){
+  header  a i{
+    margin: 0;
+  }
+}
+/* End-Header */

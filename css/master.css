@@ -3,6 +3,11 @@
 --main-color:black;
 --main-transition:0.3s;
 --border-color:#2f3336;
+--icons-color:white;
+--link-color:white;
+--transparent-background-color:rgba(0, 0, 0, 0.889);
+--cyan-color:#2fa1ec;
+--gray-color:gray;
 }
 *{
   margin: 0;
@@ -46,7 +51,7 @@ margin-bottom: 30px;
 width: fit-content;
 }
 header > i:hover{
-  color: #2fa1ec;
+  color: var(--cyan-color);
 }
 
 header  a{
@@ -83,18 +88,15 @@ margin-right: 20px;
 main{
   margin-left: 25%;
   width: 35%;
-  color: white;
 }
 main .main-head{
   position: sticky;
   top: 0;
   border-bottom: 1px solid var(--border-color);
   z-index: 9;
-  background-color: rgba(0, 0, 0, 0.889);
+  background-color: var(--transparent-background-color);
 }
 main .main-head .search-head{
-display: flex;
-align-items: center;
 justify-content: center;
 padding: 10px 20px;
 }
@@ -111,40 +113,35 @@ position: absolute;
 content: "";
 left: 20px;
 top: 15px;
+color: var(--icons-color);
 }
 main .main-head .search-head .search input {
 width: 100%;
 height: 100%;
 border-radius: 30px;
 outline: none;
-padding: 20px;
 padding-left: 50px;
 background-color: #202327;
 caret-color: white;
-color: white;
 border: none;
 transition: var(--main-transition);
 }
 main .main-head .search-head .search input:focus{
-  border: 1px solid #2fa1ec;
+  border: 1px solid var(--cyan-color);
 }
 main .main-head .search-head .search input:focus + i{
-  color: #2fa1ec;
+  color: var(--cyan-color);
 }
 main .main-head .search-head >i{
 font-size: 19px;
 margin-left: 20px;
-padding: 10px;
 border-radius: 50%;
 cursor: pointer;
 transition: var(--main-transition);
+color: var(--icons-color);
 }
 main .main-head .search-head >i:hover{
   background-color: var(--border-color);
-}
-main .tab-list{
-  display: flex;
-  align-items: center;
 }
 main .tab-list li{
   flex: 1;
@@ -153,7 +150,6 @@ main .tab-list li{
 main .tab-list li a{
 display: block;
 padding: 15px;
-color: white;
 font-size: 16px;
 position: relative;
 transition: var(--main-transition);
@@ -168,7 +164,7 @@ main .tab-list li a::after{
   width:0px;
   height: 4px;
   border-radius: 3px;
-  background-color: #2fa1ec;
+  background-color: var(--cyan-color);
   transition: var(--main-transition);
 }
 main .tab-list li a:hover::after{
@@ -198,7 +194,6 @@ main .content .new h3{
   content: "";
   right: 15px;
   top: 85%;
-  font-size: 30px;
 }
 main .content .trend{
   padding: 10px 15px;
@@ -208,12 +203,28 @@ main .content .trend:hover{
   background-color: rgba(20, 19, 19, 0.712);
 }
 main .content .trend span{
-  color: gray;
+  color: var(--gray-color);
   display: block;
   margin-bottom: 10px;
   font-size: 14px;
 }
 main .content .trend p{
   text-align: right;
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 10px;
+  direction: rtl;
+}
+main .content .trend-3 .holder{
+justify-content: flex-end;
+}
+main .content .holder img{
+  max-width: 100%;
+  border-radius: 20px;
+  margin-left: 15px;
+}
+main .content .trend-4 p,
+main .content .trend-9 p{
+  text-align: left;
 }
 /* End-Main */

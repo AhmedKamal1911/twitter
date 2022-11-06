@@ -1,5 +1,10 @@
 /* Start-All-margin */
-
+.pd-10{
+  padding: 10px;
+}
+.pd-20{
+  padding: 20px;
+}
 /* END-Padding */
 /* Start-Font */
 .fs-30{

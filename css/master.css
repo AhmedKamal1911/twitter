@@ -164,6 +164,11 @@ main .tab-list li{
   flex: 1;
   text-align: center;
 }
+@media(max-width:767px){
+  main .tab-list{
+    margin-bottom: 10px;
+  }
+}
 main .tab-list li a{
 display: block;
 padding: 15px;

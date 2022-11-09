@@ -89,23 +89,40 @@ main{
   margin-left: 25%;
   width: 35%;
 }
+@media(max-width:1500px){
+  main{
+    margin-left: 80px;
+    width: calc(100% - 80px);
+  }
+}
+
 main .main-head{
-  position: sticky;
-  top: 0;
-  border-bottom: 1px solid var(--border-color);
-  z-index: 9;
-  background-color: var(--transparent-background-color);
+position: sticky;
+top: 0;
+border-bottom: 1px solid var(--border-color);
+z-index: 9;
+background-color: var(--transparent-background-color);
 }
 main .main-head .search-head{
 justify-content: center;
 padding: 10px 20px;
 }
+@media(max-width:767px){
+  main .main-head .search-head{
+    padding: 10px 10px 15px;
+  }
+}
 main .main-head .search-head .search{
 width: 75%;
 height: 45px;
 border-radius: 30px;
-position: relative; 
-flex: 1;
+position: relative;
+}
+@media(max-width:767px){
+  main .main-head .search-head .search{
+    width: 68%;
+    height: 35px;
+  }
 }
 
 main .main-head .search-head .search i {
@@ -155,6 +172,12 @@ position: relative;
 transition: var(--main-transition);
 font-weight: bold;
 }
+@media(max-width:767px){
+  main .tab-list li a{
+    padding: 3px;
+    font-size: 10px;
+  }
+}
 main .tab-list li a::after{
   position: absolute;
   content: "";
@@ -179,6 +202,11 @@ main .content .new .img{
   border-bottom: 1px solid var(--border-color);
   cursor: pointer;
 }
+@media(max-width:767px){
+  main .content .new .img{
+    padding-bottom: 0;
+  }
+}
 main .content .new .img img{
 max-width: 100%;
 }
@@ -189,11 +217,21 @@ main .content .new span{
   left: 15px;
   font-size: 15px;
 }
+@media(max-width:767px){
+  main .content .new span{
+    font-size: 10px;
+  }
+}
 main .content .new h3{
   position: absolute;
   content: "";
   right: 15px;
   top: 85%;
+}
+@media(max-width:767px){
+  main .content .new h3{
+    font-size: 14px;
+  }
 }
 main .content .trend{
   padding: 10px 15px;
@@ -215,17 +253,33 @@ main .content .trend p{
   margin-bottom: 10px;
   direction: rtl;
 }
+@media(max-width:767px){
+  main .content .trend p{
+    font-size: 14px;
+  }
+}
 main .content .trend-3 .holder{
 justify-content: flex-end;
 }
 main .content .holder img{
   max-width: 100%;
-  border-radius: 20px;
+  border-radius: 10px;
   margin-left: 15px;
+}
+@media(max-width:767px){
+  main .content .holder img{
+    max-width: 35%;
+  }
 }
 main .content .trend-4 p,
 main .content .trend-9 p{
   text-align: left;
+}
+@media(max-width:767px){
+  main .content .trend-4 p,
+main .content .trend-9 p{
+  font-size: 12px;
+}
 }
 /* End-Main */
 /* Start-Footer */
@@ -238,6 +292,11 @@ aside{
   border-left: 1px solid var(--border-color);
   color: white;
   padding: 10px 15% 10px 20px;
+}
+@media(max-width:1500px){
+  aside{
+    display: none;
+  }
 }
 aside .follow{
   background-color: var(--border-color);

@@ -214,6 +214,7 @@ main .content .new .img{
 }
 main .content .new .img img{
 max-width: 100%;
+width: 100%;
 }
 main .content .new span{
   position: absolute;
